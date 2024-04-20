@@ -1,11 +1,4 @@
-$(document).ready(function () {
-    $(".radio-btn").click(function () {
-      $(".radio-inner").toggleClass("active");
-      $("body").toggleClass("dark");
-      
 
-    });
-  });
 
   const linkColor = document.querySelectorAll('.nav__link')
 
@@ -16,32 +9,7 @@ $(document).ready(function () {
   
   linkColor.forEach(l => l.addEventListener('click', colorLink))
   
-/*=============== SHOW HIDDEN MENU ===============*/
-const showMenu = (toggleId, navbarId) => {
-    const toggle = document.getElementById(toggleId),
-      navbar = document.getElementById(navbarId);
-  
-    if (toggle && navbar) {
-      toggle.addEventListener('click', () => {
-        /* Toggle the menu */
-        navbar.classList.toggle('show-menu');
-        /* Rotate toggle icon */
-        toggle.classList.toggle('rotate-icon');
-      });
-  
-      // Hide the menu when clicking outside the menu
-      document.addEventListener('click', (event) => {
-        const targetElement = event.target;
-        if (!navbar.contains(targetElement) && !targetElement.matches(`#${toggleId}`) && navbar.classList.contains('show-menu')) {
-          navbar.classList.remove('show-menu');
-          toggle.classList.remove('rotate-icon');
-        }
-      });
-    }
-  };
-  
-  showMenu('nav-toggle', 'nav');
-  
+
   
   
 function myfunction() {

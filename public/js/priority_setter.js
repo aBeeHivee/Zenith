@@ -20,26 +20,8 @@ document.addEventListener('DOMContentLoaded', function () {
   
     linkColor.forEach(l => l.addEventListener('click', colorLink));
   
-    // Show/Hide sub-menu
-    const subMenu = document.getElementById("subMenu");
   
-    function toggleMenu() {
-      subMenu.classList.toggle("open-menu");
-    }
-  
-    // Dark mode toggle using plain JavaScript
-    function toggleDarkMode() {
-      body.classList.toggle('dark-mode');
-      radioInner.style.transform = body.classList.contains('dark-mode')
-        ? 'translateX(25px)'
-        : '';
-      // Additional actions when dark mode toggles
-    }
-  
-    // Dark mode toggle click event
-    const darkModeToggleBtn = document.querySelector('.radio-btn');
-    darkModeToggleBtn.addEventListener('click', toggleDarkMode);
-  
+   
     // Function to show hidden menu
     function showMenu(toggleId, navbarId) {
       const toggle = document.getElementById(toggleId);
